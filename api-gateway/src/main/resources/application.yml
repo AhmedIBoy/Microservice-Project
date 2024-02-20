@@ -1,0 +1,26 @@
+#server:
+#  port: 8083
+#
+#spring:
+#  application:
+#    name: API-GATEWAY
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+#      routes:
+#        - id: POST-SERVICE
+#          uri: lb://POST-SERVICE
+#          predicates:
+#            - Path=/api/posts/**
+#        - id: COMMENT-SERVICE
+#          uri: lb://COMMENT-SERVICE
+#          predicates:
+#            - Path=/api/comment/**
+#
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
